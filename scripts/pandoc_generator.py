@@ -58,9 +58,11 @@ class Doc:
 
 def generate() -> None:
     """Generate docs based on list supplied below."""
-    doc = Doc(PurePath("grants") / "res" / "uab-rc-facilities.md")
-    doc.to_plaintext()
-    doc.to_docx()
+    files = []
+    for f in files:
+        doc = Doc(f)
+        doc.to_plaintext()
+        doc.to_docx()
 
 
 # Do the thing.
